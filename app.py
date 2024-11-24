@@ -4,8 +4,8 @@ import requests
 app = Flask(__name__)
 
 # Replace these with your Edamam credentials
-EDAMAM_APP_ID = "your_app_id"
-EDAMAM_APP_KEY = "your_app_key"
+EDAMAM_APP_ID = "304ebfbb"
+EDAMAM_APP_KEY = "c83cfb887e89e36b1ef366d4eeddd571"
 EDAMAM_API_URL = "https://api.edamam.com/search"
 
 @app.route('/', methods=['GET', 'POST'])
