@@ -1,5 +1,5 @@
 # Define the image name
-IMAGE_NAME = de_recipe
+IMAGE_NAME = de_recipe_edamam
 DOCKER_ID_USER = wujenny214
 
 # Build the Docker image
