@@ -2,6 +2,7 @@
 summarizeApp
 #ignore fine-tuning
 test_trainer/
+.devcontainer 
 
 #ignore pytorch artifacts
 model.pth
