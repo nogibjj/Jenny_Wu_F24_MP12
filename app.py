@@ -31,4 +31,4 @@ def search_recipes(query):
         return f"Error: {response.status_code} - {response.reason}"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=80)

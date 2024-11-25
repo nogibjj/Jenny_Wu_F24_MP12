@@ -14,19 +14,20 @@ COPY . /app
 # using --no-cache-dir to not cache the packages and save space
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 5000 available to the world outside this container
-EXPOSE 5000
+# Make port 8000 available to the world outside this container
+EXPOSE  80
 
 # Define environment variable
 # FLASK_APP is a framework specific environmnent variable that tells
 # the flask command where the application is located
 
 #without this the flask run command will not know what app to run.
-ENV FLASK_APP=app.py
+ENV FLASK_RUN_HOST=0.0.0.0
+ENV FLASK_RUN_PORT=80
 
 # Run app.py when the container launches
 # 0.0.0.0 sets the application to listen on all network interfaces
 
 #a more secure option would be to specify the exact IP you plan to use 
 # (e.g.API gateway interface)
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["python", "app.py"]
