@@ -1,6 +1,6 @@
 # Jenny_Wu_F24_MP12
 
-[![Build and Push Docker Image](https://github.com/nogibjj/Jenny_Wu_F24_MP12/actions/workflows/build.yml/badge.svg)](https://github.com/nogibjj/Jenny_Wu_F24_MP12/actions/workflows/build.yml)
+[![Build and Push Docker Image](https://github.com/nogibjj/Jenny_Wu_F24_MP12/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Jenny_Wu_F24_MP12/actions/workflows/cicd.yml)
 
 Mini Project 12, Recipe Search with Edemam API for IDS706
 
