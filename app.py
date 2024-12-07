@@ -1,12 +1,16 @@
 from flask import Flask, request, render_template
 import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
 # Replace these with your Edamam credentials
-EDAMAM_APP_ID = "304ebfbb"
-EDAMAM_APP_KEY = "c83cfb887e89e36b1ef366d4eeddd571"
-EDAMAM_API_URL = "https://api.edamam.com/search"
+EDAMAM_APP_ID = os.getenv('EDAMAM_APP_ID')
+EDAMAM_APP_KEY = os.getenv('EDAMAM_APP_KEY')
+EDAMAM_API_URL = os.getenv('EDAMAM_API_URL')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -29,6 +33,7 @@ def search_recipes(query):
         return render_template('results.html', recipes=data.get('hits', []))
     else:
         return f"Error: {response.status_code} - {response.reason}"
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
